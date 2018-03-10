@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Angular js</title>
+</head>
+
+<body ng-app="myApp">
+    <div>
+        <div ng-controller="myCtrl">
+            <h2>parent</h2>
+                <input type="text" ng-model="displayName" />
+                <button ng-click="myFunc(displayName)">Parent</button>
+                <!-- <div ng-bind="eventName"></div> -->
+                <!-- <div ng-bind="serviceData"></div> -->
+                <h1>Child Data</h1>
+                <div ng-bind="childNameData"></div>
+            <div ng-controller="userCtrl">
+                <h1>Constant</h1>
+                <div ng-bind="myValue"></div>
+                <div ng-bind="myConstant"></div>
+                <h2>child</h2>
+                
+                <div ng-repeat="userData">
+                    
+                </div>
+                <button ng-click="userfunc()">User</button>
+                <div ng-bind="testName"></div>
+                <input type="text" ng-model="childData">
+                <button ng-click="myFunc(childData)">Parent</button>
+                <!-- <p ng-bind="fsdata"></p> -->
+                <p ng-bind="serviceData"></p>
+            </div>
+        </div>
+        <div ng-controller="siblingCtrl">
+            <!-- <div ng-bind="siblingName"></div>
+            <div ng-bind="siblingData"></div> -->
+            <h1>Sibling</h1>
+            <div ng-bind="siblingData"></div>
+        </div>
+    </div>
+</body>
+<script src="lib/angular.min.js"></script>
+<script src="./app.js"></script>
+<script src="common/my-controller.js"></script>
+<script src="common/user-controller.js"></script>
+<script src="common/sibling-controller.js"></script>
+<script src="service/userservice.js"></script>
+
+</html>
